@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(spawnedSFX);
             Instantiate(enemyPrefabs, transform.position, Quaternion.identity, transform);
-            yield return new WaitForSeconds(spawnDelay);
+            yield return new WaitForSeconds(spawnDelay * Random.Range(0.01f, 2f));
         }
 
         EnemyMovement[] enemies = FindObjectsOfType<EnemyMovement>();

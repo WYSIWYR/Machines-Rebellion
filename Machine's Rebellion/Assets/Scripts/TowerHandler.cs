@@ -16,6 +16,7 @@ public class TowerHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Time.deltaTime);
         SetTarget();
 
         //범위 내에 적 로봇이 존재할 때만 공격한다

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
         foreach(Waypoint waypoint in waypointList)
         {
             transform.position = waypoint.transform.position;
-            yield return new WaitForSeconds(moveDelay);
+            yield return new WaitForSeconds(moveDelay * Random.Range(0.03f, 3.5f));
         }
         SelfDestruct();
     }
